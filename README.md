@@ -1,6 +1,8 @@
 # Basic WebShop App with ToyShop theme
 
 A simple web application built with Express and EJS as part of the course "Software Development for the Web" at the Faculty of Electrical Engineering and Computing, University of Zagreb.
+![Home Page](screenshots/homepage.png)
+![Cart](screenshots/cart.png)
 
 ## Features
 
