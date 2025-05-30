@@ -1,0 +1,13 @@
+<header>
+  <a href="/home/getCategories" class="logo"
+    ><img src="/images/dreamland-logo-transparent.svg" alt="logo" class="logo"
+  /></a>
+  <div id="current"><%= category.name %></div>
+  <div id="icon">
+    <a href="/cart/getAll" class="cart-icon">
+      <i class="material-symbols-outlined size-35">shopping_cart</i>
+      <span id="total-count" class="<%= total > 0 ? '' : 'hide'%>"><%= total %></span>
+    </a>
+    <a href="#"><i class="material-symbols-outlined size-35">search</i></a>
+  </div>
+</header>

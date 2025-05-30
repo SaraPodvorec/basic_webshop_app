@@ -1,0 +1,32 @@
+<% if(Object.keys(cart).length !== 0) { %> <% for(let key in cart){ %> <% if
+(cart.hasOwnProperty(key)){ %>
+<div class="itm">
+  <div class="image">
+    <% let i = undefined %>
+    <% for(let category of data.categories) { %>
+      <% for(let prod of category.products) { %>
+        <% if(prod.name === key){ %>
+          <% i = prod.image %>
+          <% break; %>
+        <% } %>
+      <% } %>
+      <% if(i !== undefined) break; %>
+    <% } %>
+    <img src="/images/<%= i %>" alt="<%= key %>" />
+  </div>
+  <div class="desc">
+    <p><%= key %></p>
+  </div>
+  <div class="qnt">
+    <button class="plus-btn" onclick="addToCartAtCart('<%= key %>')">
+      <span class="material-symbols-outlined">add</span>
+    </button>
+    <input id="in-<%= key %>" type="text" value="<%= cart[key] %>" />
+    <button class="min-btn" onclick="removeFromCart('<%= key %>')">
+      <span class="material-symbols-outlined">remove</span>
+    </button>
+  </div>
+</div>
+<% } %> <% } %> <% } else { %>
+<p>Vaša košarica je prazna :(</p>
+<% } %>

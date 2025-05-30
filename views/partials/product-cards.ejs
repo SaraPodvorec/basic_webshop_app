@@ -1,0 +1,14 @@
+<% if(typeof products !== 'undefined') { %>
+    <% products.forEach(product => { %>
+        <div class="item" data-name="<%= product.name %>" data-count="${count}">
+            <div class="img-container">
+                <img class="img-btn" src="/images/<%= product.image %>" alt="<%= product.name %>" />
+                <span class="count <%= count[product.name] > 0 ? '' : 'hide' %>" id="count-<%= product.name%>"><%= count[product.name] %></span>
+                <button class="btn" onclick="addToCartAtHome('<%= product.name %>')"><i class="material-symbols-outlined size-35">shopping_cart</i></button>
+            </div>
+            <div class="item-dest">
+                <p class="item-name"><%= product.name %></p>
+            </div>
+        </div>
+    <% }); %>
+<% } %>
